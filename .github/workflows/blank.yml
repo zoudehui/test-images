@@ -31,5 +31,5 @@ jobs:
         run: |
           docker pull registry.k8s.io/ingress-nginx/controller:v1.4.0
           docker login --username=${{ secrets.USER }} --password=${{ secrets.PWD }} registry.cn-hangzhou.aliyuncs.com
-          docker tag registry.k8s.io/ingress-nginx/controller:v1.4.07 registry.cn-hangzhou.aliyuncs.com/zdh-images/ingress-nginx-controller:v1.4.0
+          docker tag registry.k8s.io/ingress-nginx/controller:v1.4.0 registry.cn-hangzhou.aliyuncs.com/zdh-images/ingress-nginx-controller:v1.4.0
           docker push registry.cn-hangzhou.aliyuncs.com/zdh-images/ingress-nginx-controller:v1.4.0
