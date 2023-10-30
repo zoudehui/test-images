@@ -29,10 +29,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          docker pull pause:3.1
+          docker pull gcr.io/google-containers/elasticsearch:v5.5.1-1
           docker login --username=${{ secrets.USER }} --password=${{ secrets.PWD }} registry.cn-hangzhou.aliyuncs.com
-          docker tag pause:3.1 registry.cn-hangzhou.aliyuncs.com/zdh-images/pause:3.1
-          docker push registry.cn-hangzhou.aliyuncs.com/zdh-images/pause:3.1
+          docker tag gcr.io/google-containers/elasticsearch:v5.5.1-1 registry.cn-hangzhou.aliyuncs.com/zdh-images/elasticsearch:v5.5.1-1
+          docker push registry.cn-hangzhou.aliyuncs.com/zdh-images/elasticsearch:v5.5.1-1
        #   docker pull registry.k8s.io/ingress-nginx/controller:v1.4.0
        #   docker login --username=${{ secrets.USER }} --password=${{ secrets.PWD }} registry.cn-hangzhou.aliyuncs.com
        #   docker tag registry.k8s.io/ingress-nginx/controller:v1.4.0 registry.cn-hangzhou.aliyuncs.com/zdh-images/ingress-nginx-controller:v1.4.0
